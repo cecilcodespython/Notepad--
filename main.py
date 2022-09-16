@@ -10,8 +10,12 @@ root = Tk()
 
 root.geometry("600x600")
 root.title("Notepad--")
-root.config(bg="black")
+root.config(bg="white")
 root.resizable(False,False)
+
+
+entry = Text(root,height='33',width='77',wrap=WORD,bg='#add8e6')
+entry.place(x=0,y=60)
 
 def open_file():
     file = filedialog.askopenfile(mode='r',filetypes=[('text files',"*txt")])
@@ -30,12 +34,11 @@ def save_file():
 
 
 
-b1 =Button(root,width='20',height='2',bg='white',text='Open',command=open_file).place(x=0,y=5)
-b2 =Button(root,width='20',height='2',bg='white',text='Save File',command=save_file).place(x=200,y=5)
-#b3 =Button(root,width='20',height='2',bg='white',text='New File',command=new_file).place(x=400,y=5)
+b1 =Button(root,width='20',height='2',bg='#add8e6',text='Open',command=open_file).place(x=100,y=5)
+b2 =Button(root,width='20',height='2',bg='#add8e6',text='Save File',command=save_file).place(x=300,y=5)
 
-entry = Text(root,height='33',width='77',wrap=WORD,bg='#add8e6')
-entry.place(x=0,y=60)
+
+
 
 
 
